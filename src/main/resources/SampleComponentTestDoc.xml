@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<add>
+	<doc>
+		<field name="id">componentTest1</field>
+		<field name="title">SomeDoc</field>
+		<field name="Body">The cat jumped over the dog while it chased the
+			mouse around. The mouse ran into the hole where the cat couldn't get
+			to it.</field>
+	</doc>
+</add>
