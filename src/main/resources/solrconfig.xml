@@ -544,6 +544,14 @@
     </lst>
   </requestHandler>
   
+  <requestHandler name="/rqdemo" class="requesthandler.RequestHandler">
+	<lst name="words">
+  		<str name="word">cat</str>
+  		<str name="word">dog</str>
+  		<str name="word">mouse</str>
+  	</lst>
+  </requestHandler>
+  
 
 
   <!-- Search Components
