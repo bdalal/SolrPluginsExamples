@@ -112,6 +112,8 @@
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
    <field name="title" type="text_en" indexed="true" stored="true" required="true" multiValued="false" omitTermFreqAndPositions="false" omitPositions="false" omitNorms="false"/>
    <field name="Body" type="text_en" indexed="true" stored="true" multiValued="false" omitTermFreqAndPositions="false" omitPositions="false" omitNorms="false"/>
+   <!-- New Timestamp field -->
+   <field name="Timestamp" type="tdate" indexed="true" stored="true" />
 
    <!-- Dynamic field definitions allow using convention over configuration
        for fields via the specification of patterns to match field names. 

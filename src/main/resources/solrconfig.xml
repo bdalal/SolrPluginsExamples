@@ -197,8 +197,21 @@
      <autoSoftCommit> 
        <maxTime>${solr.autoSoftCommit.maxTime:-1}</maxTime> 
      </autoSoftCommit>
-
+	 
   </updateHandler>
+	
+	<!-- Adding new update chain and request handler to use this chain -->
+   <updateRequestProcessorChain name="updatechain" >
+	<processor class="updatehandler.UpdateProcessorFactory" />
+	<processor class="solr.LogUpdateProcessorFactory" />
+	<processor class="solr.RunUpdateProcessorFactory" />
+   </updateRequestProcessorChain>
+   
+    <requestHandler name="/update" class="solr.UpdateRequestHandler" >
+		<lst name="defaults">
+			<str name="update.chain">updatechain</str>
+		</lst>
+	</requestHandler>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
        Query section - these settings control query time things like caches
